@@ -1,24 +1,7 @@
-#Локатор логотипа (html-элемент, содержащий в себе значок и слово "авиасейлс") - <span class="s__PcdUOp87I1e0rHSKIZrv
-s__hUp61OcxhZaQr3w4wYv9 s__sBh_0LtGspeoixytMYZg s__kyQZdK3QHkNkIMKAtKUv s__th_qVj2Jb9OfZ7IKY6QD s__NUmLvwf1WR31dqrJs__G" data-test-id="logo">>
-
-#Локатор поля Откуда - <input aria-autocomplete="list" aria-labelledby="avia_form_origin-label" autocomplete="off" tabindex="0" id="avia_form_origin-input"
-placeholder="Откуда" class="s__hC7iNZewgvf8fGTsGplA s__n9EimsKcoimG2V6o0kus s__UaXug5EzRLeYsUGa9bJ1" data-test-id="origin-input" value="Кокшетау">
-
-#Локатор поля Куда - <input aria-autocomplete="list" aria-labelledby="avia_form_destination-label" autocomplete="off" tabindex="0" id="avia_form_destination-input"
-placeholder="Куда" class="s__hC7iNZewgvf8fGTsGplA s__n9EimsKcoimG2V6o0kus s__UaXug5EzRLeYsUGa9bJ1 s__pbIJ79VEU4wqMNj75yFL" data-test-id="destination-input" value="">
-
-#Локатор поля Когда - <button class="s__iUCZVK_7pftNPmX5zeoS s__IwBVpRef_1GpuUeZuKUL s__QOH8_RMDyCm4BxeyrqOt s__OIqaFwbhkZg2cIA5d0zJ" tabindex="0"
-type="button" data-test-id="start-date-field"><div class="s__ta_SSbfNo_PsQ7Rdf70_ s__wz46TWgrOGMneOhk9MFQ s__x4KgSIG987qu2AxBtn9k" data-test-id="start-date-value">
-Когда</div><label class="s__j7kCtiyeP8K0YFMD0ryG s__l2kHHSNU3xVPgDjzOooJ s__aKqylq1xoDpv767yljgQ" data-test-id="text">Когда</label>
-
-#Локатор поля Обратно - <button class="s__iUCZVK_7pftNPmX5zeoS s__IwBVpRef_1GpuUeZuKUL s__qO2qUuaHHBMsAgKGqoWL s__OIqaFwbhkZg2cIA5d0zJ" tabindex="0"
-type="button" data-test-id="end-date-field"><div class="s__ta_SSbfNo_PsQ7Rdf70_ s__wz46TWgrOGMneOhk9MFQ s__x4KgSIG987qu2AxBtn9k"
-data-test-id="end-date-value">Обратно</div><label class="s__j7kCtiyeP8K0YFMD0ryG s__l2kHHSNU3xVPgDjzOooJ s__aKqylq1xoDpv767yljgQ"
-data-test-id="text">Обратно</label></button>
-
-#Локатор чек-бокса "Открыть Ostrovok.ru в новой вкладке" - <span class="s__ta_SSbfNo_PsQ7Rdf70_ s__wz46TWgrOGMneOhk9MFQ s__R81Hd9qjhKmXLV5Q63RQ"
-data-test-id="no-cashback-label">Открыть Ostrovok.ru в&nbsp;новой вкладке</span>
-
-#Локатор кнопки Найти билеты - <button type="button" class="s__pYAhaCkOP9mPTxKVg5Qi s__cQ6neS4ccCunOu9Ydn0k s__tkvB9amX28GXeWxPcrad
-s__eEClvAD7BnPrQbwBW5zC s__p0epgEYgBbKyjc8MfJPw s__VtKkhjd_g3s0MVyvRx1g" data-test-id="form-submit" aria-expanded="false">
-<div class="s__wr9OcknDPAtMpjta7a24 s__pWd6FeazwBmNIpomSjsp s__YQHxt19vOcGsOro8j0pF" data-test-id="text">Найти билеты</div></button>
+#Локатор логотипа (html-элемент, содержащий в себе значок и слово "авиасейлс") - ("[data-test-id= logo]")
+#Локатор поля Откуда - ("[id=avia_form_origin-input]")
+#Локатор поля Куда - ("[id=avia_form_destination-input]")
+#Локатор поля Когда - ("[data-test-id=start-date-field]")
+#Локатор поля Обратно - ("[data-test-id=end-date-field]")
+#Локатор чек-бокса "Открыть Ostrovok.ru в новой вкладке" - ('.s__BGUqp9s2kxbNEnDjdIYc')
+#Локатор кнопки Найти билеты - ('.s__Yzjov8gtTIwlOo3oK8L3')

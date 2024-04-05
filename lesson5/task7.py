@@ -31,7 +31,7 @@ sleep(2)
 # Ввести в это же поле текст 999
 search_number.send_keys(999)
 sleep(2)
-driver.quit()
+
 
 # Повторение скрипта в Firefox
 driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))

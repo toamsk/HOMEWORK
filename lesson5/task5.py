@@ -9,44 +9,39 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from webdriver_manager.firefox import GeckoDriverManager
-
-#from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.keys import Keys 
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.alert import Alert
 
-def repeat_three_timses():
-    driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
 
 # Открыть страницу Chrome
-    driver.get("http://uitestingplayground.com/classattr")
-    driver.maximize_window()
-    sleep(3)
-
-# Кликните на синюю кнопку
-    blue_button = driver.find_element(By.CLASS_NAME, "btn-primary")
-    blue_button.click()
-    sleep(3)
-    driver.quit()
+driver.get("http://uitestingplayground.com/classattr")
+driver.maximize_window()
+sleep(1)
 
 # Запускаем скрипт три раза
 for i in range(3):
-    repeat_three_timses()
-
+    blue_button = driver.find_element(By.CLASS_NAME, value= "btn-primary").click()
+    sleep(2)
+    alert = Alert(driver)
+    alert.accept()
+    sleep(2)
 
 # Повторение скрипта в Firefox
-def repeat_three_timses():
-    driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
+driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
 
 # Открыть страницу Firefox
-    driver.get("http://uitestingplayground.com/classattr")
-    driver.maximize_window()
-    sleep(3)
+driver.get("http://uitestingplayground.com/classattr")
+driver.maximize_window()
+sleep(1)
 
-# Кликните на синюю кнопку
-    blue_button = driver.find_element(By.CLASS_NAME, "btn-primary")
-    blue_button.click()
-    sleep(3)
-    driver.quit()
-
-# Запускаем скрипт три раза
+#Запускаем скрипт три раза
 for i in range(3):
-    repeat_three_timses()
+    blue_button = driver.find_element(By.CLASS_NAME, value= "btn-primary").click()
+    sleep(2)
+    alert = Alert(driver)
+    alert.accept()
+    sleep(2)
+
+driver.quit()

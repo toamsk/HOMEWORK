@@ -20,18 +20,16 @@ driver.maximize_window()
 sleep(2)
 
 # В поле username введите значение tomsmith
-search_username = driver.find_element(By.ID, "username")
-search_username.send_keys("tomsmith")
+search_username = driver.find_element(By.ID, value="username").send_keys("tomsmith")
 sleep(2)
 
 # Найти поле ввода для пароля и ввести значение
-password_field = driver.find_element(By.ID, "password")
-password_field.send_keys("SuperSecretPassword!")
+password_field = driver.find_element(By.ID, value="password").send_keys("SuperSecretPassword!")
 sleep(2)
 
 # Найти кнопку Login и нажать на неё
-login_button = driver.find_element(By.XPATH, "//button[@type='submit']")
-login_button.click()
+login_button = driver.find_element(By.XPATH, value="//button[@type='submit']").click()
+sleep(2)
 
 
 # Повторение скрипта в Firefox
@@ -43,18 +41,15 @@ driver.maximize_window()
 sleep(2)
 
 # В поле username введите значение tomsmith
-search_username = driver.find_element(By.ID, "username")
-search_username.send_keys("tomsmith")
+search_username = driver.find_element(By.ID, value="username").send_keys("tomsmith")
 sleep(2)
 
 # Найти поле ввода для пароля и ввести значение
-password_field = driver.find_element(By.ID, "password")
-password_field.send_keys("SuperSecretPassword!")
+password_field = driver.find_element(By.ID, value="password").send_keys("SuperSecretPassword!")
 sleep(2)
 
 # Найти кнопку Login и нажать на неё
-login_button = driver.find_element(By.XPATH, "//button[@type='submit']")
-login_button.click()
+login_button = driver.find_element(By.XPATH, value="//button[@type='submit']").click()
 sleep(2)
 
 driver.quit()

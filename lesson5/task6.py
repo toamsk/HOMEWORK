@@ -19,8 +19,7 @@ driver.maximize_window()
 sleep(2)
 
 # В модальном окне нажмите на кнопку Сlose
-modal_windowe = driver.find_element(By.CSS_SELECTOR, ".modal-footer p")
-modal_windowe.click()
+modal_windowe = driver.find_element(By.CSS_SELECTOR, value= ".modal-footer p").click()
 sleep(2)
 driver.quit()
 
@@ -34,7 +33,6 @@ driver.maximize_window()
 sleep(2)
 
 # В модальном окне нажмите на кнопку Сlose
-modal_windowe = driver.find_element(By.CSS_SELECTOR, ".modal-footer p")
-modal_windowe.click()
+modal_windowe = driver.find_element(By.CSS_SELECTOR, value= ".modal-footer p").click()
 sleep(2)
 driver.quit()

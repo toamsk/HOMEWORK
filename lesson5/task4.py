@@ -9,44 +9,40 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from webdriver_manager.firefox import GeckoDriverManager
-
-#from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
 
-def click_button():
-    driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
 
 # Открыть страницу Chrome
-    driver.get("http://uitestingplayground.com/dynamicid")
-    driver.maximize_window()
-    sleep(2)
+driver.get("http://uitestingplayground.com/dynamicid")
+driver.maximize_window()
+sleep(2)
 
 # Кликнуть на синюю кнопку
-    blue_element = driver.find_element(By.CSS_SELECTOR, "button.btn-primary")
-    blue_element.click()
-    sleep(2)
-    driver.quit()
+blue_element = driver.find_element(By.XPATH, '//button[text()="Button with Dynamic ID"]')
 
-# Запускаем функцию три раза
 for i in range(3):
-    click_button()
+    blue_element.click()
+    sleep(1)
+    # проверка нажатия трех раз на кнопку
+    #blue_element.send_keys(Keys.TAB)
 
 # Повторение скрипта в Firefox
-def click_button():
-    driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
-    driver.maximize_window()
+driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
 
 # Открыть страницу Firefox
-    driver.get("http://uitestingplayground.com/dynamicid")
-    driver.maximize_window()
-    sleep(1)
+driver.get("http://uitestingplayground.com/dynamicid")
+driver.maximize_window()
+sleep(2)
 
 # Кликнуть на синюю кнопку
-    blue_element = driver.find_element(By.CSS_SELECTOR, "button.btn-primary")
+blue_element = driver.find_element(By.XPATH, '//button[text()="Button with Dynamic ID"]')
+
+for i in range(3):
     blue_element.click()
     sleep(1)
-    driver.quit()
+    # проверка нажатия трех раз на кнопку
+    #blue_element.send_keys(Keys.TAB)
 
-# Запускаем функцию три раза
-for i in range(3):
-    click_button()
+driver.quit()
