@@ -18,11 +18,11 @@ driver.get("http://uitestingplayground.com/textinput")
 driver.maximize_window()
 
 # В поле ввода написать текст
-entry_field = driver.find_element(By.CSS_SELECTOR, value = "#newButtonName").send_keys("Skypro")
+driver.find_element(By.CSS_SELECTOR, value = "#newButtonName").send_keys("Skypro")
 #sleep(3)
 
 # Нажать на синюю кнопку
-blue_button = driver.find_element(By.CSS_SELECTOR, "#updatingButton").click()
+driver.find_element(By.CSS_SELECTOR, "#updatingButton").click()
 #sleep(3)
 
 # Найти элемент плашки

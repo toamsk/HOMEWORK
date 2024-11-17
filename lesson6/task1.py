@@ -17,11 +17,10 @@ driver.get("http://uitestingplayground.com/ajax")
 driver.maximize_window()
 
 # Найти и нажимам на синиюю кнопку
-blue_button = driver.find_element(By.CSS_SELECTOR, ("[id=ajaxButton]")).click()
+driver.find_element(By.CSS_SELECTOR, ("[id=ajaxButton]")).click()
 
 # Найти элемент плашки
-content = driver.find_element(By.CSS_SELECTOR, "#content")
-txt = content.find_element(By.CSS_SELECTOR, "p.bg-success").text
+txt = driver.find_element(By.CSS_SELECTOR, value = "p.bg-success").text
 
 # Напечатать текст на эксран
 print(txt)
