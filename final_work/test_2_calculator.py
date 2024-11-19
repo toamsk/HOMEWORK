@@ -11,7 +11,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-
 def test_calc():
     driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
 
@@ -30,7 +29,8 @@ def test_calc():
     driver.find_element(By.XPATH, ('//span[text()="="]')).click()
 
     # 4. Проверить (assert), что в окне отобразится результат 15 через 45 секунд
-    result = WebDriverWait(driver, 46).until(EC.text_to_be_present_in_element ((By.CLASS_NAME, "screen"), "15"))
+    WebDriverWait(driver, 46).until(EC.text_to_be_present_in_element((By.CLASS_NAME, "screen"), "15"))
+    result = driver.find_element(By.CLASS_NAME, "screen").text  
     assert result == "15"
     print(result)
 
