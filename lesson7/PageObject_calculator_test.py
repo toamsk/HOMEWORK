@@ -8,9 +8,10 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 from pages.MainPage import MainPage_calculator
 
+
 def test_calculator():
-    browser = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+    browser = webdriver.Chrome(
+        service=ChromeService(ChromeDriverManager().install()))
     main_page = MainPage_calculator(browser)
     main_page.delay(45)
     main_page.click_num()
-
